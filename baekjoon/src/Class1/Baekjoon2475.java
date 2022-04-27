@@ -14,13 +14,8 @@ public class Baekjoon2475 {
         int index = 0;
         int result = 0;
         while (st.hasMoreTokens()) {
-            if(index == 4) {
-                result %= Math.sqrt(Integer.parseInt(st.nextToken()));
-                break;
-            }
-            result += Math.sqrt(Integer.parseInt(st.nextToken()));
-            index++;
+            result += Math.pow(Integer.parseInt(st.nextToken()), 2);
         }
-        System.out.println(result);
+        System.out.println(result % 10);
     }
 }
